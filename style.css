@@ -23,8 +23,7 @@
 }
 
 .left {
-    position: relative;
-    right: 30px;
+    margin-left: -2%;
     width: 30%;
     border: solid black 1px;
     display: flex;
@@ -76,6 +75,7 @@
     font-size: 16px;
     color: white;
     font-weight: 900;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .about {
@@ -85,11 +85,11 @@
     font-size: 16px;
     color: white;
     font-weight: 900;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .right {
-    position: relative;
-    left: 30px;
+    margin-right: -2%;
     width: 30%;
     border: solid black 1px;
     display: flex;
@@ -101,6 +101,24 @@
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+.far-left {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    border: solid 1px black;
+    margin-left: -1%;
+}
+
+.far-right {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    border: solid 1px black;
+    margin-right: -1;
 }
 
 .down-col {
@@ -117,4 +135,61 @@
     display: flex;
     flex-direction: column;
     width: 27%;
+}
+
+.right .top-col {
+    border: 1px black solid;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+}
+
+@media screen and (max-width: 812px) {
+    .top-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+    .top-container .left{
+        padding-right: 10px;
+        margin-left: -2%;
+        width: 50%;
+        order: 1;
+    }
+    .top-container .right {
+        padding-left: 10px;
+        margin-right: -2%;
+        width: 50%;
+        order: 2;
+    }
+    .top-container .center {
+        padding: 0;
+        order: 3;
+    }
+    .right .top-col {
+        margin-top: 80px;
+    }
+    .right .down-col {
+        margin-top: 40px;
+    }
+    .far-left {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 27%;
+        border: solid 1px black;
+        margin-left: -10%;
+    }
+    
+    .far-right {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 27%;
+        border: solid 1px black;
+        margin-right: -10%;
+    }
 }
